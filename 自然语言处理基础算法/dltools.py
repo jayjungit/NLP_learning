@@ -18,7 +18,7 @@ from collections import defaultdict
 
 import pandas as pd
 import requests
-from IPython import display
+# from IPython import display
 from matplotlib import pyplot as plt
 
 dltools = sys.modules[__name__]
@@ -559,7 +559,7 @@ def read_time_machine():
     """Load the time machine dataset into a list of text lines."""
     # with open(dltools.download('time_machine'), 'r') as f:
     # 从云上下载文件, 改成从本地读取
-    with open('./article.txt', 'r') as f:
+    with open('../data/article.txt', 'r') as f:
         lines = f.readlines()
     return [re.sub('[^A-Za-z]+', ' ', line).strip().lower() for line in lines]
 
